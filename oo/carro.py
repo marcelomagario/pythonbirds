@@ -152,27 +152,10 @@ class Carro:
 
     def calcular_direcao(self):
         return self.direcao.calcular_direcao()
-#
-#
-#
-if __name__ == '__main__':
 
-    # instanciando o objeto
-    pedal = Motor()
-    volante = Direcao()
-    mitsi = Carro(motor=pedal, direcao=volante)
-#     # Testando o volante
-#     mitsi.direcao.girar_a_esquerda()
-#     mitsi.direcao.girar_a_esquerda()
-#     print(mitsi.direcao.mostrar_a_direcao())
-#     # Testando o motor
-#     mitsi.motor.frear()
-#     mitsi.motor.acelerar()
-#     mitsi.motor.acelerar()
-#     mitsi.motor.acelerar()
-#     mitsi.motor.acelerar()
-#     mitsi.motor.acelerar()
-#     mitsi.motor.frear()
-#     print(mitsi.motor.mostrar_velocidade())
+# if __name__ == '__main__':
 #
-#
+#     # instanciando o objeto
+#     pedal = Motor()
+#     volante = Direcao()
+#     mitsi = Carro(motor=pedal, direcao=volante)
