@@ -8,11 +8,24 @@ class Pessoa:
     def cumprimentar(self):
         return f'ola {id(self)}'
 
+    @staticmethod
+    def metodo_estatico():
+        return 51
+
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} - olhos: {cls.olhos}'
+
+
+class Homem(Pessoa): # Herança
+    pass
+
+
 if __name__ == '__main__':
     danilo = Pessoa(nome='Danilo', idade=7)
     rafael = Pessoa(nome='Rafael', idade=4)
     claudio = Pessoa(danilo, rafael, nome='Claudio')
-    marcelo = Pessoa(nome='Marcelo', idade=35)
+    marcelo = Homem(nome='Marcelo', idade=35)
 
     print(marcelo.cumprimentar())
     print(marcelo.nome, marcelo.idade)
@@ -32,6 +45,12 @@ if __name__ == '__main__':
     print(claudio.__dict__)
     print(marcelo.__dict__)
     print('-------------------------------------------')
-
+    print(Pessoa.metodo_estatico(), marcelo.metodo_estatico())
+    print(Pessoa.nome_e_atributos_de_classe(), marcelo.nome_e_atributos_de_classe())
+    # Um Homem é uma Pessoa, mas uma Pessoa não é um homem. Herança
+    print(isinstance(rafael, Homem))
+    print(isinstance(rafael, Pessoa))
+    print(isinstance(marcelo, Homem))
+    print(isinstance(marcelo, Pessoa))
 
 
